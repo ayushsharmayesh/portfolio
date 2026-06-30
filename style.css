@@ -1,16 +1,159 @@
 /* ==========================================================================
-   PART 1: PERFORMANCE RESET, VARIABLE MANIFESTO & COSMIC BACKGROUND
+   PART 1 & RESPONSIVE FIX: FIXED COSMIC BACKGROUND & CONTAINER
    ========================================================================== */
 
-/* 1. Global Optimization & Architecture Reset */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    user-select: none; /* Premium UI feel ke liye drag/text selection off kiya */
+    user-select: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+:root {
+    --bg-deep-space: #020208;
+    --text-primary: #ffffff;
+    --text-muted: #8fa3bf;
+    --gold-accent: #e5c158;
+    --gold-glow: rgba(229, 193, 88, 0.35);
+    --neon-blue: #3a86ff;
+    --neon-purple: #8338ec;
+    --glass-bg: rgba(255, 255, 255, 0.02);
+    --glass-border-blue: rgba(58, 134, 255, 0.25);
+    --glass-border-purple: rgba(131, 56, 236, 0.25);
+    --font-cinzel: 'Cinzel', serif;
+    --font-inter: 'Inter', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #020208;
+    font-family: var(--font-inter);
+    color: var(--text-primary);
+    
+    /* 🚨 FIX: Mobile par agar content bada ho toh halka scroll allow karega, scroll block nahi karega */
+    overflow-y: auto; 
+    overflow-x: hidden;
+}
+
+/* Main Core Portfolio Container */
+.portfolio-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Full screen height */
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1.5rem; /* Dynamic padding for mobile edges */
+    text-align: center;
+    background: transparent;
+}
+
+/* ==========================================================================
+   🚨 NEW: MOBILE & LAPTOP RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* Laptop / Desktop standard layouts (Aapka dynamic scaling text) */
+@media (min-width: 992px) {
+    .main-title {
+        font-size: 5.5rem;
+    }
+    .social-buttons {
+        flex-direction: row;
+        gap: 25px;
+    }
+}
+
+/* Tablets aur Normal Screens ka adjustment */
+@media (max-width: 991px) {
+    .main-title {
+        font-size: 4rem;
+    }
+    .subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* 📱 Small Mobile Phones Viewport Fix (Sab kuch screen ke andar auto-fit hoga) */
+@media (max-width: 576px) {
+    .portfolio-container {
+        justify-content: flex-start; /* Mobile par top se spacing standard rakhega */
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    .welcome-text {
+        font-size: 0.9rem !important;
+        letter-spacing: 0.3em !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    /* 🚨 Title mobile screen se bahar nahi bhagega */
+    .main-title {
+        font-size: 2.5rem !important; 
+        letter-spacing: 0.03em !important;
+        line-height: 1.2 !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* Subtitle wrapper layout lines hide on mobile to save space */
+    .subtitle-wrapper {
+        width: 100% !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .tech-line {
+        display: none !important; /* Side technical lines mobile par remove ho jayengi */
+    }
+    .subtitle {
+        font-size: 0.95rem !important;
+        padding: 0 5px !important;
+    }
+
+    /* Academic Pillars (Artificial intelligence • Research • Innovation) tags adjustment */
+    .pillars-tags {
+        flex-wrap: wrap !important; /* Do line mein clean text break ho jayega wrap hoke */
+        justify-content: center !important;
+        gap: 8px 12px !important;
+        font-size: 0.8rem !important;
+        margin-bottom: 2.5rem !important;
+    }
+    .pillars-tags .dot {
+        display: none !important; /* Dots hata ke space optimize ki hai mobile par */
+    }
+    .pillars-tags span {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 4px 10px;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    /* 🚨 Social Buttons ka Side-by-Side se Vertical list layout collapse */
+    .social-buttons {
+        flex-direction: column !important; /* Ek ke niche ek buttons aayenge phone par */
+        width: 100% !important;
+        max-width: 280px !important;
+        gap: 15px !important;
+        margin-bottom: 3rem !important;
+    }
+    .glass-btn {
+        width: 100% !important;
+    }
+
+    /* Enter Portfolio action alignment adjustment */
+    .enter-action-wrapper {
+        margin-top: auto !important; /* Bilkul standard position catch karega niche */
+        width: 100% !important;
+        max-width: 280px !important;
+    }
+    .enter-portfolio-btn {
+        width: 100% !important;
+        padding: 14px 0 !important;
+    }
+}
+
 
 /* 2. Elite Sci-Fi Theme Design Tokens */
 :root {
