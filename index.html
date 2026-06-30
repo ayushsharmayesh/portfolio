@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Space Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="space-particles"></canvas>
+
+    <div class="cosmic-glow-left"></div>
+    <div class="cosmic-glow-right"></div>
+
+    <main class="portfolio-container">
+        
+        <div class="top-ornament" style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 15px; opacity: 0.85;">
+            <span style="width: 40px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-accent));"></span>
+            <i class="fa-solid fa-star-of-david" style="color: var(--gold-accent); font-size: 0.85rem; filter: drop-shadow(0 0 5px var(--gold-accent));"></i>
+            <span style="width: 40px; height: 1px; background: linear-gradient(90deg, var(--gold-accent), transparent);"></span>
+        </div>
+
+        <h2 class="welcome-text">WELCOME TO</h2>
+        <h1 class="main-title">MY PORTFOLIO</h1>
+
+        <div class="subtitle-wrapper">
+            <span class="tech-line left-line"></span>
+            <p class="subtitle">IIT Madras BS in Data Science & Application</p>
+            <span class="tech-line right-line"></span>
+        </div>
+
+        <div class="pillars-tags">
+            <span>Artificial intelligence</span>
+            <span class="dot"></span>
+            <span>Research</span>
+            <span class="dot"></span>
+            <span>Innovation</span>
+        </div>
+
+        <div class="social-buttons">
+            <a href="https://github.com/ayushsharmayesh" target="_blank" class="glass-btn github-btn">
+                <div class="btn-inner">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/ayush-sharma-573088385?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="glass-btn linkedin-btn">
+                <div class="btn-inner">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="enter-action-wrapper">
+            <div class="scroll-indicator">
+                <i class="fa-solid fa-angles-down animate-bounce"></i>
+            </div>
+            
+            <a href="dash.html" class="enter-portfolio-btn">
+                <span class="corner-bracket left"></span>
+                <span class="btn-text">ENTER PORTFOLIO</span>
+                <span class="corner-bracket right"></span>
+            </a>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

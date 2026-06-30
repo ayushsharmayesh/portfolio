@@ -1,0 +1,532 @@
+/* ==========================================================================
+   PART 1: PERFORMANCE RESET, VARIABLE MANIFESTO & COSMIC BACKGROUND
+   ========================================================================== */
+
+/* 1. Global Optimization & Architecture Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none; /* Premium UI feel ke liye drag/text selection off kiya */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2. Elite Sci-Fi Theme Design Tokens */
+:root {
+    --bg-deep-space: #020208;
+    --text-primary: #ffffff;
+    --text-muted: #8fa3bf;
+    --gold-accent: #e5c158;
+    --gold-glow: rgba(229, 193, 88, 0.35);
+    --neon-blue: #3a86ff;
+    --neon-purple: #8338ec;
+    --glass-bg: rgba(255, 255, 255, 0.02);
+    --glass-border-blue: rgba(58, 134, 255, 0.25);
+    --glass-border-purple: rgba(131, 56, 236, 0.25);
+    --font-cinzel: 'Cinzel', serif;
+    --font-inter: 'Inter', sans-serif;
+}
+
+/* 3. Base Document Settings */
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-deep-space);
+    font-family: var(--font-inter);
+    color: var(--text-primary);
+    overflow: hidden; /* Scrollbars completely hidden for cinematic view */
+}
+
+/* 4. Deep Space Radial Light Falloff */
+#space-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 50%, rgba(12, 12, 35, 0.6) 0%, var(--bg-deep-space) 100%);
+}
+
+/* 5. Left Ambient Nebula Shadow (Elite Neon-Purple Light) */
+.cosmic-glow-left {
+    position: fixed;
+    width: 650px;
+    height: 650px;
+    top: -15%;
+    left: -15%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(131, 56, 236, 0.16) 0%, rgba(58, 134, 255, 0.04) 55%, transparent 100%);
+    filter: blur(90px);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* 6. Right Ambient Nebula Shadow (Elite Cyber-Blue Light) */
+.cosmic-glow-right {
+    position: fixed;
+    width: 750px;
+    height: 750px;
+    bottom: -20%;
+    right: -12%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(58, 134, 255, 0.14) 0%, rgba(131, 56, 236, 0.03) 65%, transparent 100%);
+    filter: blur(110px);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* 7. Centered Interface Container */
+.portfolio-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+    text-align: center;
+}
+/* ==========================================================================
+   PART 2: TYPOGRAPHY, CINEMATIC TEXT GRADIENTS & TITLES
+   ========================================================================== */
+
+/* 1. "WELCOME TO" Sub-Header */
+.welcome-text {
+    font-family: var(--font-inter);
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 0.55em; /* Aksharon ke beech premium space */
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    opacity: 0.85;
+    text-shadow: 0 0 20px rgba(143, 163, 191, 0.2);
+}
+
+/* 2. "MY PORTFOLIO" - Ultra Premium Metallic 3D Title */
+.main-title {
+    font-family: var(--font-cinzel);
+    font-size: 5.5rem; /* Large Cinematic Size */
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    
+    /* Silver-Chrome Metallic Gradient Effect */
+    background: linear-gradient(
+        180deg, 
+        #ffffff 0%, 
+        #e2e8f0 40%, 
+        #cbd5e1 55%, 
+        #94a3b8 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Deep multi-layered glow behind text */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8))
+            drop-shadow(0 10px 25px rgba(255, 255, 255, 0.15))
+            drop-shadow(0 0 40px rgba(131, 56, 236, 0.2));
+            
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+
+/* ==========================================================================
+   PART 3: GOLDEN SUBTITLE ARCHITECTURE & TECH PILLARS
+   ========================================================================== */
+
+/* 1. Subtitle Alignment and Positioning */
+.subtitle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* 2. Premium Sleek Golden Tech Lines (Left & Right Sides) */
+.tech-line {
+    height: 1px;
+    flex-grow: 1;
+    background: linear-gradient(90deg, transparent, var(--gold-accent), transparent);
+    position: relative;
+    opacity: 0.7;
+}
+
+/* Accent diamond tips on the line ends */
+.tech-line::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    width: 7px;
+    height: 7px;
+    background-color: var(--gold-accent);
+    transform: rotate(45deg);
+    box-shadow: 0 0 8px var(--gold-accent);
+}
+
+.left-line::after { right: 0; }
+.right-line::after { left: 0; }
+
+/* 3. Golden Luxury Subtitle Text */
+.subtitle {
+    font-family: var(--font-cinzel);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--gold-accent);
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 15px var(--gold-glow), 0 0 30px rgba(229, 193, 88, 0.2);
+    white-space: nowrap;
+}
+
+/* 4. Core Pillars Tags Area (AI, Research, Innovation) */
+.pillars-tags {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 3.5rem;
+}
+
+.pillars-tags span {
+    font-family: var(--font-inter);
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    opacity: 0.9;
+    text-shadow: 0 0 10px rgba(143, 163, 191, 0.1);
+}
+
+/* Dynamic Golden Separator Dot */
+.pillars-tags .dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--gold-accent);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px var(--gold-accent);
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   PART 4: HIGH-END GLASSMORPHISM & NEON CYBER-GLOW BUTTONS
+   ========================================================================== */
+
+/* 1. Buttons Container Layout */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 15;
+}
+
+/* 2. Core Glassmorphic Button Blueprint */
+.glass-btn {
+    position: relative;
+    width: 240px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 12px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 2px; /* Border glow create karne ke liye wrapper gap */
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    overflow: hidden;
+}
+
+/* 3. Outer Neon Glow & Borders Differentiation */
+.github-btn {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(131, 56, 236, 0.15);
+    border: 1px solid var(--glass-border-purple);
+}
+
+.linkedin-btn {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(58, 134, 255, 0.15);
+    border: 1px solid var(--glass-border-blue);
+}
+
+/* 4. Inside Layer for Text & Icons Alignment */
+.btn-inner {
+    width: 100%;
+    height: 100%;
+    background: rgba(7, 7, 18, 0.75);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-inner i {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    transition: transform 0.3s ease;
+}
+
+.btn-inner span {
+    font-family: var(--font-inter);
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+}
+
+/* 5. Elite Hover Interactions (Cyberpunk Electric Effect) */
+.glass-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.15),
+        transparent
+    );
+    transition: all 0.6s ease;
+}
+
+.glass-btn:hover::before {
+    left: 100%; /* Shiny light sweep animation */
+}
+
+/* GitHub Hover Specifics */
+.github-btn:hover {
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 25px rgba(131, 56, 236, 0.55), 
+                inset 0 0 20px rgba(131, 56, 236, 0.3);
+    transform: translateY(-4px);
+}
+
+/* LinkedIn Hover Specifics */
+.linkedin-btn:hover {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 25px rgba(58, 134, 255, 0.55), 
+                inset 0 0 20px rgba(58, 134, 255, 0.3);
+    transform: translateY(-4px);
+}
+
+.glass-btn:hover .btn-inner i {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+/* ==========================================================================
+   PART 5: FUTURISTIC ANGULAR "ENTER PORTFOLIO" ACTION BUTTON
+   ========================================================================== */
+
+/* 1. Wrapper Layer for Arrow Indicator and Button Alignment */
+.enter-action-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 15;
+    width: 100%;
+}
+
+/* 2. Top Double-Arrow Indicator Animation Frame */
+.scroll-indicator {
+    font-size: 1.2rem;
+    color: var(--gold-accent);
+    margin-bottom: 1.2rem;
+    opacity: 0.65;
+    text-shadow: 0 0 10px var(--gold-glow);
+}
+
+/* 3. The Main Hexagonal/Angular Button Shell */
+.enter-portfolio-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 440px;
+    height: 54px;
+    text-decoration: none;
+    background: linear-gradient(90deg, transparent, rgba(229, 193, 88, 0.03), transparent);
+    
+    /* Clean Top and Bottom borders in Gold */
+    border-top: 1px solid rgba(229, 193, 88, 0.4);
+    border-bottom: 1px solid rgba(229, 193, 88, 0.4);
+    border-left: none;
+    border-right: none;
+    
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+/* 4. Tech Brackets on Left and Right Ends (< > Geometry) */
+.corner-bracket {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 28px;
+    border-top: 1px solid var(--gold-accent);
+    border-bottom: 1px solid var(--gold-accent);
+    transition: all 0.4s ease;
+}
+
+/* Left Angular Bracket Layout */
+.corner-bracket.left {
+    left: 0;
+    border-left: 1px solid var(--gold-accent);
+    transform: translateY(-50%) skewX(-25deg); /* Cuts the corner inside */
+}
+
+/* Right Angular Bracket Layout */
+.corner-bracket.right {
+    right: 0;
+    border-right: 1px solid var(--gold-accent);
+    transform: translateY(-50%) skewX(25deg); /* Cuts the corner inside */
+}
+
+/* Tiny core dots on the tips of the button */
+.enter-portfolio-btn::after, .enter-portfolio-btn::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: var(--gold-accent);
+    transform: rotate(45deg);
+    box-shadow: 0 0 8px var(--gold-accent);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.enter-portfolio-btn::before { left: -10px; top: 24px; }
+.enter-portfolio-btn::after { right: -10px; top: 24px; }
+
+/* 5. Typography Inside Enter Button */
+.btn-text {
+    font-family: var(--font-cinzel);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--gold-accent);
+    letter-spacing: 0.4em;
+    text-indent: 0.4em; /* Letters standard center balancing */
+    transition: all 0.4s ease;
+    text-shadow: 0 0 10px var(--gold-glow);
+}
+
+/* 6. Elite Sci-Fi Hover Responses */
+.enter-portfolio-btn:hover {
+    background: linear-gradient(90deg, transparent, rgba(229, 193, 88, 0.12), transparent);
+    border-top-color: var(--gold-accent);
+    border-bottom-color: var(--gold-accent);
+    box-shadow: 0 0 30px rgba(229, 193, 88, 0.15), 
+                inset 0 0 15px rgba(229, 193, 88, 0.05);
+}
+
+.enter-portfolio-btn:hover .btn-text {
+    color: #ffffff;
+    letter-spacing: 0.45em;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px var(--gold-accent);
+}
+
+.enter-portfolio-btn:hover .corner-bracket {
+    width: 24px;
+    box-shadow: 0 0 15px var(--gold-accent);
+}
+.enter-portfolio-btn:hover::before, .enter-portfolio-btn:hover::after {
+    opacity: 1;
+}
+
+
+/* ==========================================================================
+   PART 6: KINETIC ENGINE & ADVANCED KEYFRAME ANIMATIONS
+   ========================================================================== */
+
+/* 1. Applying Continuous Animations to Elements */
+
+/* Bouncing Down Arrow Indicator */
+.animate-bounce {
+    animation: techBounce 2s infinite ease-in-out;
+}
+
+/* Pulsing Nebula Glowing Lights */
+.cosmic-glow-left {
+    animation: nebulaPulseLeft 12s infinite ease-in-out alternate;
+}
+
+.cosmic-glow-right {
+    animation: nebulaPulseRight 14s infinite ease-in-out alternate;
+}
+
+/* 2. Keyframes Definitions (The Physics Layout) */
+
+/* Up & Down Floating Bouncing Track */
+@keyframes techBounce {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateY(6px);
+        opacity: 1;
+        filter: drop-shadow(0 0 8px var(--gold-accent));
+    }
+}
+
+/* Left Purple Nebula Breathing Motion */
+@keyframes nebulaPulseLeft {
+    0% {
+        transform: scale(1) translate(0, 0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1) translate(3%, 2%);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.95) translate(-2%, -1%);
+        opacity: 0.7;
+    }
+}
+
+/* Right Blue Nebula Breathing Motion */
+@keyframes nebulaPulseRight {
+    0% {
+        transform: scale(0.95) translate(0, 0);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.15) translate(-4%, -3%);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translate(2%, 1%);
+        opacity: 0.75;
+    }
+}
+
+/* Optional Subtle Float for Main Container content */
+.portfolio-container > *:not(.social-buttons):not(.enter-action-wrapper) {
+    animation: interfaceFloat 6s infinite ease-in-out;
+}
+
+@keyframes interfaceFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+

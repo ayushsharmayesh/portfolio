@@ -1,0 +1,484 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:#070b16;
+
+    color:white;
+
+    font-family: 'Inter', sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+/* =========================
+   INTRO PAGE
+========================= */
+
+.intro{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 10%;
+
+}
+
+.intro-container{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr;
+
+    align-items:center;
+
+    gap:80px;
+
+}
+
+.intro-tag{
+
+    display:inline-block;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#60a5fa;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+}
+
+.intro-left h1{
+
+    font-family:'Cinzel', serif;
+
+    font-size:140px;
+
+    line-height:.9;
+
+    margin-bottom:25px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    background:linear-gradient(
+        135deg,
+        #ffffff,
+        #60a5fa,
+        #7c3aed
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+
+
+
+.intro-left p{
+
+    max-width:650px;
+
+    color:#c7d0db;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+
+/* =========================
+   BACKGROUND GLOW
+========================= */
+
+.intro::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    background:#2563eb;
+
+    filter:blur(220px);
+
+    opacity:.12;
+
+    top:-200px;
+
+    left:-150px;
+
+    z-index:-1;
+}
+
+.intro{
+
+    position:relative;
+}
+
+/* =========================
+   PROFILE FRAME
+========================= */
+
+.photo-placeholder{
+
+    box-shadow:
+
+    0 0 30px rgba(96,165,250,.25),
+
+    0 0 60px rgba(96,165,250,.15),
+
+    0 0 100px rgba(96,165,250,.10);
+
+    transition:.4s;
+}
+
+.photo-placeholder:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard{
+
+    padding:120px 10%;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+}
+
+.section-title span{
+
+    color:#60a5fa;
+
+    letter-spacing:2px;
+
+}
+
+.section-title h2{
+
+    font-size:60px;
+
+    margin-top:15px;
+
+}
+
+.dashboard-grid{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.dashboard-card{
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#60a5fa;
+
+}
+
+.dashboard-card h3{
+
+    color:#60a5fa;
+
+    margin-bottom:15px;
+
+}
+
+.dashboard-card p{
+
+    color:#c7d0db;
+
+    line-height:1.8;
+
+}
+
+/* =========================
+   ELITE CARD EFFECT
+========================= */
+
+.dashboard-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(12px);
+}
+
+.dashboard-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    background:rgba(96,165,250,.08);
+
+    border-radius:50%;
+
+    top:-120px;
+
+    right:-120px;
+
+    transition:.4s;
+}
+
+.dashboard-card:hover::before{
+
+    transform:scale(1.3);
+}
+
+.dashboard-card:hover{
+
+    box-shadow:
+
+    0 0 25px rgba(96,165,250,.15),
+
+    0 0 60px rgba(96,165,250,.08);
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact{
+
+    padding:120px 10%;
+}
+
+.contact-grid{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+}
+
+.contact-card{
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+}
+
+.contact-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#60a5fa;
+
+    box-shadow:
+
+    0 0 25px rgba(96,165,250,.15);
+}
+
+.contact-card h3{
+
+    color:#60a5fa;
+
+    margin-bottom:15px;
+}
+
+.contact-card p{
+
+    color:#c7d0db;
+
+    line-height:1.8;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    .intro-container{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+    }
+
+    .photo-placeholder{
+
+        width:300px;
+
+        height:300px;
+    }
+
+    .dashboard-grid{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .intro{
+
+        padding:80px 8%;
+    }
+
+    .intro-left h1{
+
+        font-size:70px;
+    }
+
+    .intro-left p{
+
+        font-size:16px;
+    }
+
+    .section-title h2{
+
+        font-size:40px;
+    }
+
+    .dashboard-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .photo-placeholder{
+
+        width:250px;
+
+        height:250px;
+
+        font-size:20px;
+    }
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    color:#c7d0db;
+}
+
+.footer p{
+
+    margin:10px 0;
+}
+
+
+.profile-photo{
+
+    width:420px;
+
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    display:block;
+
+    margin:auto;
+
+    border:4px solid rgba(96,165,250,.5);
+
+    box-shadow:
+    0 0 30px rgba(96,165,250,.25),
+    0 0 60px rgba(96,165,250,.15),
+    0 0 100px rgba(96,165,250,.08);
+
+    transition:0.4s;
+}
+
+.profile-photo:hover{
+
+    transform:scale(1.03);
+}
+
