@@ -482,3 +482,14 @@ body{
     transform:scale(1.03);
 }
 
+
+.dashboard-link{
+    text-decoration:none;
+    color:inherit;
+}
+
+.dashboard-card{
+    cursor:pointer;
+    
+}
+
