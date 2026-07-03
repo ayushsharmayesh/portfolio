@@ -304,63 +304,6 @@ body{
     0 0 60px rgba(96,165,250,.08);
 }
 
-/* =========================
-   CONTACT PAGE
-========================= */
-
-.contact{
-
-    padding:120px 10%;
-}
-
-.contact-grid{
-
-    margin-top:60px;
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:25px;
-}
-
-.contact-card{
-
-    padding:35px;
-
-    border-radius:25px;
-
-    background:rgba(255,255,255,.04);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    transition:.35s;
-}
-
-.contact-card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:#60a5fa;
-
-    box-shadow:
-
-    0 0 25px rgba(96,165,250,.15);
-}
-
-.contact-card h3{
-
-    color:#60a5fa;
-
-    margin-bottom:15px;
-}
-
-.contact-card p{
-
-    color:#c7d0db;
-
-    line-height:1.8;
-}
 
 /* =========================
    MOBILE RESPONSIVE
