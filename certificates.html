@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Certificates | Ayush Sharma</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="certificates.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+AS
+
+</div>
+
+<ul>
+
+
+<li><a href="dash.html">Dashboard</a></li>
+
+<li><a href="research.html">Research</a></li>
+
+<li><a href="projects.html">Projects</a></li>
+
+<li><a href="certificates.html">Certificates</a></li>
+
+<li><a href="competitions.html">Competitions</a></li>
+
+<li><a href="skills.html">Skills</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<h1>
+
+CERTIFICATES
+
+</h1>
+
+<p>
+
+Every certificate represents a step in my learning journey,
+from Data Science and Artificial Intelligence
+to Programming and Research.
+
+</p>
+
+</section>
+
+
+<section class="certificate-section">
+
+    <h2 class="section-heading">
+
+        My Certifications
+
+    </h2>
+
+    <div class="certificate-grid">
+
+        <div class="certificate-card"
+
+     data-image="certificates/iit-madras.png"
+
+     data-title="IIT Madras"
+
+     data-course="BS Degree Foundation Level"
+
+     data-category="Academic"
+
+     data-year="2026"
+
+     data-verify="#"
+
+     data-download="#">
+
+
+
+            <div class="certificate-thumbnail">
+
+                🏛
+
+            </div>
+
+            <span class="certificate-badge">
+
+                Academic
+
+            </span>
+
+            <h3>
+
+                IIT Madras
+
+            </h3>
+
+            <p>
+
+                BS Degree Foundation Level
+
+            </p>
+
+            <span class="certificate-year">
+
+                2026
+
+            </span>
+
+
+
+
+        </div>
+
+        <div class="certificate-card"
+
+     data-image="certificates/google.png"
+
+     data-title="Google"
+
+     data-course="Data Analytics"
+
+     data-category="Professional"
+
+     data-year="2026"
+
+     data-verify="#"
+
+     data-download="#">
+
+     
+
+            <div class="certificate-thumbnail">
+
+                🌐
+
+            </div>
+
+            <span class="certificate-badge">
+
+                Professional
+
+            </span>
+
+            <h3>
+
+                Google
+
+            </h3>
+
+            <p>
+
+                Data Analytics
+
+            </p>
+
+            <span class="certificate-year">
+
+                2026
+
+            </span>
+
+        </div>
+
+        <div class="certificate-card"
+             data-image="certificates/ibm.png"
+             data-title="IBM"
+             data-course="Python for Data Science"
+             data-category="Professional"
+             data-year="2026"
+             data-verify="#"
+             data-download="#">
+
+            <div class="certificate-thumbnail">
+
+                💻
+
+            </div>
+
+            <span class="certificate-badge">
+
+                Professional
+
+            </span>
+
+            <h3>
+
+                IBM
+
+            </h3>
+
+            <p>
+
+                Python for Data Science
+
+            </p>
+
+            <span class="certificate-year">
+
+                2026
+
+            </span>
+
+        </div>
+
+        <div class="certificate-card"
+
+     data-image="certificates/google.png"
+
+     data-title="Google"
+
+     data-course="Data Analytics"
+
+     data-category="Professional"
+
+     data-year="2026"
+
+     data-verify="#"
+
+     data-download="#">
+
+            <div class="certificate-thumbnail">
+
+                🤖
+
+            </div>
+
+            <span class="certificate-badge">
+
+                Online Course
+
+            </span>
+
+            <h3>
+
+                Coursera
+
+            </h3>
+
+            <p>
+
+                Machine Learning
+
+            </p>
+
+            <span class="certificate-year">
+
+                2026
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--==========================
+        CERTIFICATE POPUP
+===========================-->
+
+<div class="popup-overlay" id="popup">
+
+    <div class="popup-box">
+
+        <button class="close-popup" id="closePopup">
+
+            &times;
+
+        </button>
+
+        <img
+        id="popupImage"
+        src="certificates/iit-madras.png"
+        alt="Certificate">
+
+        <h2 id="popupTitle">
+
+            IIT Madras
+
+        </h2>
+
+        <p id="popupCourse">
+
+            BS Degree Foundation Level
+
+        </p>
+
+        <div class="popup-info">
+
+            <div>
+
+                <strong>
+
+                    Category
+
+                </strong>
+
+                <span id="popupCategory">
+
+                    Academic
+
+                </span>
+
+            </div>
+
+            <div>
+
+                <strong>
+
+                    Year
+
+                </strong>
+
+                <span id="popupYear">
+
+                    2026
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="popup-buttons">
+
+            <a
+            id="verifyBtn"
+            href="#">
+
+            Verify Certificate
+
+            </a>
+
+            <a
+            id="downloadBtn"
+            href="#">
+
+            Download PDF
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Cards yaha aayenge -->
+
+<!-- Popup yaha banega -->
+
+<script src="certificates.js"></script>
+
+</body>
+
+</html>
+
