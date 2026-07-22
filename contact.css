@@ -104,7 +104,8 @@ nav ul{
 
     list-style:none;
 
-    gap:30px;
+    gap:35px;
+
 
 }
 
@@ -863,7 +864,7 @@ nav a.active::after{
 
         justify-content:center;
 
-        gap:16px;
+        gap:18px;
 
     }
 
